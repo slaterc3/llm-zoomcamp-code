@@ -64,7 +64,7 @@ $ \frac{184\texttt{ tokens}}{45\texttt{ tokens}} \approx{4\times}\texttt{ as man
 Compare the `english_brevity` output token count to the original 1-sentence version (also with `summary_length = long`). How do they compare?
 
 - About the same (within 20%)
-- 2-4x more
+- ✅ 2-4x more ✅
 - 5-10x more
 - 10x+ more
 
