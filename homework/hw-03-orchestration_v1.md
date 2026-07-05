@@ -1,6 +1,7 @@
-# Christopher Guy Slater
+## LLM Zoomcamp 2026 Homework: Vector Search
+## Christopher Guy Slater
 ## 2026-06-29
-## Homework: Vector Search
+
 
 ## Question 1: Context Engineering
 
