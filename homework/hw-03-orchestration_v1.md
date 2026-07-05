@@ -38,26 +38,27 @@ What is the approximate **output** token count for `multilingual_agent`?
 - 500+ tokens
 
 ### **Q3 Explanation**
-![log_token_usage](screenshots\3-03-tokens.png)
+![log_token_usage](screenshots\3-03-short-tokens.png)
 
-For the Multilingual Agent, we can see a total of 123 output tokens. Therefore a range of 60-100 tokens is a more appropriate than the next largest option - 200-400 tokens.
+For the Multilingual Agent, we can see a total of 45 output tokens for the `short` summary option. Therefore a range of 60-100 tokens is a much more appropriate than the next largest option - 200-400 tokens.
 
 ## Question 4: Token usage — long summary
-
-Run `4_simple_agent.yaml` again with `summary_length = long`.
 
 Compare the `multilingual_agent` output token count to your result from Question 3. Roughly how many times more output tokens does the long summary use?
 
 - About the same (within 20%)
-- 2-5x more
+- ✅ 2-5x more ✅
 - 10-20x more
 - 50x more
 
+### **Q4 Explanation**
+![short-vs-long](screenshots\3-04-compare-short-long.png)
+
+In Q3, the short summary produced `45` ouput tokens. For the long summary, we see `184` output tokens, which is about *4x as many*.
+
+$ \frac{184\texttt{ tokens}}{45\texttt{ tokens}} \approx{4\times}\texttt{ as many} $
+
 ## Question 5: Modifying a flow
-
-Open `4_simple_agent.yaml` in the Kestra flow editor. Find the `english_brevity` task and change its prompt from asking for exactly **1 sentence** to asking for exactly **3 sentences**.
-
-Save the flow, then run it with `summary_length = long`.
 
 Compare the `english_brevity` output token count to the original 1-sentence version (also with `summary_length = long`). How do they compare?
 
@@ -66,11 +67,22 @@ Compare the `english_brevity` output token count to the original 1-sentence vers
 - 5-10x more
 - 10x+ more
 
+### **Q5 Explanation**
+![increased-sentences](screenshots\3-05-sentences.png)
+
+`1-sentence Output Tokens: 45`
+
+`3-sentences Output Tokens: 93`
+
+$ \frac{93}{45} \approx{2\times \texttt{more tokens}} $
+
 ## Question 6: Best Practices
 
 Based on what you learned in this module, for production workflows requiring deterministic, repeatable results with strict compliance requirements (e.g., financial reporting, workflows in highly regulated industries), which approach is most appropriate?
 
 - Always use AI agents for maximum flexibility and adaptation
-- Use traditional task-based workflows for predictability and auditability
+- ✅ Use traditional task-based workflows for predictability and auditability ✅
 - Use only RAG without agents for better performance
 - Use web search tools exclusively to ensure current data
+
+For any production workflows that require near-idempotent (deterministic )results, the best approach would be to use traditional `task`-based workflows. For highly regulated industry requirements, this will not only ensure that outputs are consistent, but segmentable tasks will provide clear data lineage.
