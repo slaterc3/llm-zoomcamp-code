@@ -122,6 +122,8 @@ Now re-run the query. How many input tokens do we see?
 
 > These numbers vary between runs. Pick the closest option.
 
+![input tokens output](./screenshots/hw5-q2-input-tokens.png)
+
 ## Q3. Span timing
 
 Each span automatically records its duration. Look at the console output
@@ -133,6 +135,10 @@ For a typical query, roughly how long does the LLM call take?
 * 100-500ms
 * 500-2000ms
 * ✅ Over 2000ms
+
+As seen in the screenshot (below), the time from start to finish for just the `rag` portion is ~5000 ms:
+
+![duration](./screenshots/hw5-q3.png)
 
 > The first call can be slower (cold start). Pick the range you see
 > most often.
@@ -147,6 +153,8 @@ Re-run the query from Q1. Which span names appear in the `spans` table?
 * ✅ `rag`, `search`, and `llm`
 * `search`, `llm`, and `judge`
 
+![spans table contents](./screenshots/hw5-q4.png)
+
 ## Q5. Querying trace data
 
 Using SQL (or pandas), compute the total duration for each span name
@@ -155,6 +163,8 @@ excluding `rag`. Which span type takes the most total time?
 * `search`
 * ✅ `llm`
 * They're all about the same
+
+![time difference](./screenshots/hw5-q5-2.png)
 
 ## Q6. Token stability across runs
 
@@ -165,3 +175,5 @@ How much do the input tokens vary across these 4 runs?
 * Within 10% of each other
 * Within 50% of each other
 * They vary more than 50%
+
+![input tokens](./screenshots/hw5-q6.png)
