@@ -21,7 +21,7 @@ What's the average number of input tokens across these 3 calls?
 * 14000
 * 140000
 
-![Q1 input tokens](.\screenshots\hw4-1-avg-tokens.png)
+![Q1 input tokens](./screenshots/hw4-1-avg-tokens.png)
 
 ## Q2. First result with text search
 
