@@ -115,8 +115,8 @@ attributes on the `llm` span:
 
 Now re-run the query. How many input tokens do we see?
 
-* ✅ 700
-* 7000
+* 700
+* ✅ 7000
 * 70000
 * 700000
 
